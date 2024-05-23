@@ -10,6 +10,8 @@
     sts=2;
     #ts=2;
     expandtab=true;
+    smarttab=true;
+    autoindent=true;
   };
   keymaps = [
     {action = "<cmd>Telescope live_grep<CR>"; key="<leader>g";}
