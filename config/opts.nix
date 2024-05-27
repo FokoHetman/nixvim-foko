@@ -1,5 +1,5 @@
 {lib,...}: {
-  #globals.mapleader = " ";
+  globals.mapleader = " ";
   opts = {
 
     number = true;
