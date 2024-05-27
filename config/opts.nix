@@ -14,7 +14,7 @@
     autoindent=true;
   };
   keymaps = [
-    {action = "<cmd>Telescope live_grep<CR>"; key="<leader>g";}
+    {action = "<cmd>NvimTreeOpen<CR>"; key="<leader>t";}
   ];
   highlight = {
     Comment.fg = "#ff00ff";
