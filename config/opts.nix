@@ -14,7 +14,7 @@
     autoindent=true;
   };
   keymaps = [
-    {action = "<cmd>NvimTreeOpen<CR>"; key="T";}
+    {action = "NvimTreeOpen"; key="T";}
   ];
   highlight = {
     Comment.fg = "#ff00ff";
