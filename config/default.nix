@@ -38,4 +38,7 @@
     openOnSetupFile = true;
     autoReloadOnWrite = true;
   };
+  plugins.nvim-web-devicons = {
+    enable = true;
+  };
 }
