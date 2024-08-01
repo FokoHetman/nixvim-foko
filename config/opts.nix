@@ -16,6 +16,7 @@
   };
   keymaps = [
     {action = "<cmd>NvimTreeOpen<CR>"; key="<leader>t";}
+    {action = "<cmd>VimtexCompile<CR>"; key="<leader>l";}
     {action = "<cmd>Telescope live_grep<CR>"; key="<leader>g";}
   ];
   #autoCmd = [
