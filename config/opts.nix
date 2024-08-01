@@ -4,7 +4,7 @@
 
     number = true;
     #relativenumber = true;
-    #clipboard = "unnamedplus";
+    #clipboard = "wl-clipboard";
     
     sw=2;
     sts=2;
@@ -12,10 +12,15 @@
     expandtab=true;
     smarttab=true;
     autoindent=true;
+    smartindent=true;
   };
   keymaps = [
-    {action = "NvimTreeOpen"; key="T";}
+    {action = "<cmd>NvimTreeOpen<CR>"; key="<leader>t";}
+    {action = "<cmd>Telescope live_grep<CR>"; key="<leader>g";}
   ];
+  #autoCmd = [
+  #  event = [ "BufEnter" "BufWinEnter" ];
+  #];
   highlight = {
     Comment.fg = "#ff00ff";
     Comment.bg = "#000000";
