@@ -1,6 +1,6 @@
 {self, pkgs, ...}: {
   # Import all your configuration modules here
-  imports = [ ./bufferline.nix ./opts.nix ];
+  imports = [ ./bufferline.nix ./opts.nix ./harpoon.nix ];
 
   globals.mapleader = " ";
   colorschemes.catppuccin.enable = true;
@@ -16,9 +16,9 @@
     servers = {
       tsserver.enable = true;
       lua-ls.enable = true;
-      #rust-analyzer.enable = true;
-      #rust-analyzer.installRustc = true;
-      #rust-analyzer.installCargo = true;
+      rust-analyzer.enable = true;
+      rust-analyzer.installRustc = true;
+      rust-analyzer.installCargo = true;
 
     };
   };
@@ -40,5 +40,6 @@
   };
   extraPlugins = with pkgs.vimPlugins; [
     vimtex
+    rustaceanvim
   ];
 }
