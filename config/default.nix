@@ -19,7 +19,6 @@
       rust-analyzer.enable = true;
       rust-analyzer.installRustc = true;
       rust-analyzer.installCargo = true;
-
     };
   };
   plugins.cmp = {
@@ -41,5 +40,6 @@
   extraPlugins = with pkgs.vimPlugins; [
     vimtex
     rustaceanvim
+    zig-vim
   ];
 }
