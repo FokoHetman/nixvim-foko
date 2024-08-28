@@ -18,6 +18,8 @@
 
     vimtex.enable = true;
     image.enable = true;
+    surround.enable = true;
+    trouble.enable = true;
   };
 
   
@@ -28,6 +30,6 @@
     autoReloadOnWrite = true;
   };
   extraPlugins = with pkgs.vimPlugins; [
-    vimtex
+    
   ];
 }
