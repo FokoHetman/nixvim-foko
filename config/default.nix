@@ -6,7 +6,19 @@
   colorschemes.catppuccin.enable = true;
   plugins = { # one line plugins
     lualine.enable = true;
-    telescope.enable = true;
+    telescope = {
+      enable = true;
+      extensions.file-browser.enable = true;
+      keymaps = {
+        "<C-f>" = {
+          action = "find_files";
+          options = {
+            desc = "Telescope Find Files";
+          };
+        };
+        "<leader>fg" = "live_grep";
+      };
+    };
     oil.enable = true;
     treesitter.enable = true;
     luasnip.enable = true;
