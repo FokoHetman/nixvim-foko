@@ -22,7 +22,7 @@
   };
   extraPlugins = with pkgs.vimPlugins; [
     vimtex
-    rustaceanvim
+    rustaceanvim  # requires pkgs.rust-analyzer
     zig-vim
   ];
 }
