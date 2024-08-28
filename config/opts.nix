@@ -34,7 +34,7 @@
     };
   };
   keymaps = [
-    {action = "<cmd>NvimTreeToggle<CR>"; key="<leader>t";}
+    {action = "<cmd>NvimTreeToggle<CR>"; key="<C-t>";}
     {action = "<cmd>VimtexCompile<CR>"; key="<leader>l";}
     {action = "<cmd>Telescope live_grep<CR>"; key="<leader>g";}
   ];
