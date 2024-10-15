@@ -24,10 +24,7 @@
     luasnip.enable = true;
     bufferline.enable = true;
 
-    haskell-scope-highlighting.enable = true;
-    zig.enable = true;
-    rustaceanvim.enable = true;
-
+    
     vimtex.enable = true;
     image.enable = true;
     surround.enable = true;
