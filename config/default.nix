@@ -4,6 +4,9 @@
 
   globals.mapleader = " ";
   colorschemes.catppuccin.enable = true;
+  clipboard = {
+    providers.wl-copy.enable = true;
+  };
   plugins = { # one line plugins
     lualine.enable = true;
     telescope = {
@@ -17,6 +20,21 @@
           };
         };
         "<leader>fg" = "live_grep";
+      };
+    };
+    illuminate = {
+      enable = true;
+      underCursor = false;
+    };
+    obsidian = {
+      enable = true;
+      settings = {
+        workspaces = [
+          {
+            name = "Vault";
+            path = "~/Projects/Vault/";
+          }
+        ];
       };
     };
     oil.enable = true;
@@ -41,4 +59,27 @@
   extraPlugins = with pkgs.vimPlugins; [
     
   ];
+  extraConfigLua = ''
+    require("lspconfig").nixd.setup({
+      cmd = { "nixd" },
+      settings = {
+        nixd = {
+          nixpkgs = {
+            expr = "import <nixpkgs> { }",
+          },
+          formatting = {
+            command = { "alejandra" }, -- or nixfmt or nixpkgs-fmt
+          },
+          options = {
+            nixos = {
+              expr = '(builtins.getFlake "github:fokohetman/nixos").nixosConfigurations.fokopc.options',
+            },
+          --   home_manager = {
+          --       expr = '(builtins.getFlake "/PATH/TO/FLAKE").homeConfigurations.CONFIGNAME.options',
+          --   },
+          },
+        },
+      },
+    })
+  '';
 }
