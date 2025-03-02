@@ -44,6 +44,8 @@
 
     
     vimtex.enable = true;
+    vimtex.zathuraPackage = pkgs.zathura;
+
     image.enable = true;
     surround.enable = true;
     trouble.enable = true;
